@@ -1,6 +1,6 @@
 ---
 - hosts: google
-  user: {{ username }}
+  user: <username>
   become: yes
   roles:
     - role: salarium

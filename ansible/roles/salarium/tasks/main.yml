@@ -3,32 +3,32 @@
   file:
     path: /opt/salarium
     state: directory
-    owner: {{ username }}
-    group: {{ group }}
+    owner: <username>
+    group: <group>
     mode: '0755'
 
 - name: Copy salarium-in script
   ansible.builtin.copy:
     src: files/salarium-in.py
     dest: /opt/salarium/salarium-in.py
-    owner: {{ username }}
-    group: {{ group }}
+    owner: <username>
+    group: <group>
     mode: '0644'
 
 - name: Copy salarium-out script
   ansible.builtin.copy:
     src: files/salarium-out.py
     dest: /opt/salarium/salarium-out.py
-    owner: {{ username }}
-    group: {{ group }}
+    owner: <username>
+    group: <group>
     mode: '0644'
 
 - name: Copy requirements.txt
   ansible.builtin.copy:
     src: files/requirements.txt
     dest: /opt/salarium/requirements.txt
-    owner: {{ username }}
-    group: {{ group }}
+    owner: <username>
+    group: <group>
     mode: '0644'
 
 - name: Install virtualenv

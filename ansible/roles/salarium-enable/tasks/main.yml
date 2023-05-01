@@ -1,7 +1,7 @@
 - name: Salarium time in weekdays 
   ansible.builtin.cron:
     name: "salarium time in weekdays"
-    user: {{ username }}
+    user: <username>
     minute: "0"
     hour: "08"
     weekday: "1-5"
@@ -10,7 +10,7 @@
 - name: Salarium time out weekdays
   ansible.builtin.cron:
     name: "salarium time out weekdays"
-    user: {{ username }}
+    user: <username>
     minute: "0"
     hour: "17"
     weekday: "1-5"

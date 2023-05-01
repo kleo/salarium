@@ -1,0 +1,2 @@
+[google]
+<ip_address> ansible_ssh_private_key_file=~/.ssh/google/gc-1/id_ed25519

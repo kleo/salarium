@@ -1,0 +1,14 @@
+---
+- hosts: google
+  user: {{ username }}
+  become: yes
+  roles:
+    - role: salarium
+      tags: salarium
+
+    - role: salarium-enable
+      tags: salarium-enable
+
+    - role: salarium-disable
+      tags: salarium-disable
+

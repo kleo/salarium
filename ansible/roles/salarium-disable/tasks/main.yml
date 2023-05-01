@@ -1,0 +1,19 @@
+- name: Salarium time in weekdays disable
+  ansible.builtin.cron:
+    name: "salarium time in weekdays"
+    user: {{ username }}
+    minute: "0"
+    hour: "08"
+    weekday: "1-5"
+    job: "sleep $(( 1$(date +\\%N) \\% 120 )) ; /opt/salarium/venv/bin/python /opt/salarium/salarium-in.py >> /opt/salarium/salarium.log"
+    state: absent
+
+- name: Salarium time out weekdays disable
+  ansible.builtin.cron:
+    name: "salarium time out weekdays"
+    user: {{ username }}
+    minute: "0"
+    hour: "17"
+    weekday: "1-5"
+    job: "sleep $(( 1$(date +\\%N) \\% 120 )) ; /opt/salarium/venv/bin/python /opt/salarium/salarium-out.py >> /opt/salarium/salarium.log"
+    state: absent

@@ -21,7 +21,7 @@ ansible-playbook -i ansible/hosts ansible/main.yml --tags=salarium-enable
 
 5. On unscheduled dates (e.g. sick leave) where you don't need to time in/out you need to manually disable the crontab using salarium-disable role. Take note you'll need to run salarium-enable role again, preferably before the next time in.
 
-6. You can also reconfigure time in/out randomness by adjusting crontab sleep delay on salarium-enable/disable roles. Script currently has a delay of 0 to 120 seconds. Adjust according to your discretion.
+6. You can also reconfigure time in/out randomness by adjusting crontab sleep delay on salarium-enable/disable roles. Script currently has a delay of 0 to 120 seconds. Adjust accordingly.
 
 ```
 ansible-playbook -i ansible/hosts ansible/main.yml --tags=salarium-disable
